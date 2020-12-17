@@ -1,2 +1,10 @@
-package com.crm.dao;public interface CustomerDAO {
+package com.crm.dao;
+
+import com.crm.entity.Customer;
+
+import java.util.List;
+
+public interface CustomerDAO {
+
+    public List<Customer> getCustomers();
 }
