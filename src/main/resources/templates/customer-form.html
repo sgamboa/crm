@@ -18,6 +18,7 @@
 <div id="container">
     <h3>Save Customer</h3>
     <form action="#" th:action="@{/customer/saveCustomer}" th:object="${customer}" method="post">
+        <input type="hidden" path="id" th:field="*{id}"/>
         <p>First Name: <input type="text" th:field="*{firstName}" /></p>
         <p>Last Name: <input type="text" th:field="*{lastName}" /></p>
         <p>Email: <input type="text" th:field="*{email}" /></p>
