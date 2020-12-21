@@ -16,7 +16,6 @@ public class CustomerDAOImpl implements CustomerDAO{
     private EntityManager entityManager;
 
     @Override
-    @Transactional
     public List<Customer> getCustomers() {
         Session session = entityManager.unwrap(Session.class);
 
