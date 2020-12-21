@@ -22,4 +22,10 @@ public class CustomerDAOImpl implements CustomerDAO{
         List<Customer> customers = entityManager.createQuery("from Customer", Customer.class).getResultList();
         return customers;
     }
+
+    @Override
+    public void saveCustomer(Customer customer) {
+        Session session = entityManager.unwrap(Session.class);
+        entityManager.persist(customer);
+    }
 }
